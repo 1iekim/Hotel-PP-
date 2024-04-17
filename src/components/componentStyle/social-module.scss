@@ -1,0 +1,20 @@
+.social__block {
+
+  margin-top: 35px;
+  display: flex;
+  gap: 10px;
+
+  &--link {
+    height: 25px;
+    border-radius: 50%;
+    transition-duration: .3s;
+
+    &:hover {
+      box-shadow: 5px 5px 10px #585858;//#3577db;
+    }
+  }
+  &--img {
+    width: 25px;
+    height: 25px;
+  }
+}

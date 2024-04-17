@@ -1,0 +1,16 @@
+.report{
+  &__control{
+    &--btn{
+      &:hover {
+        filter: drop-shadow(0,0,10px,3px, #000);
+      }
+      &-arrow {
+        transition: all .3s;
+        &:hover {
+          cursor: pointer;
+          filter: drop-shadow(0 5px 4px rgb(255, 178, 63));
+        }
+      }
+    }
+  }
+}

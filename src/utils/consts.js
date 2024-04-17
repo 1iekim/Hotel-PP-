@@ -1,0 +1,5 @@
+export const MAIN_PAGE = '/'
+export const ROOMS_PAGE = '/room'
+export const POSTS_PAGE = '/post'
+export const INFO_PAGE = '/info'
+export const PENSION_PAGE = '/pension'
