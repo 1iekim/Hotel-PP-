@@ -1,0 +1,138 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 410px;
+    width: 100%;
+    height: 55px;
+    margin: 0;
+  
+    color: #FFFFFF;
+    font-size: 24px;
+    background-color: rgb(255, 178, 63);
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    max-width: 100%;
+    height: 350px;
+    justify-content: space-evenly;
+
+    box-shadow: 0px 0px 8px 0px #00000040;
+  }
+
+  &__photos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 0 14px;
+    position: relative;
+    // animation: showImg .5s;
+  }
+
+  &__photo {
+    min-width: 100px;
+    width: 100%;
+    max-width: 260px;
+    position: relative;
+    animation: showImg .5s;
+  }
+
+  &__video-conntent {
+    margin-bottom: 75px;
+  }
+
+  &__videos {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0 14px;
+  }
+
+  &__video {
+    // transition: all 2s;
+
+    &--link {
+      position: relative;
+      display: flex;
+      // transition: all 2s;
+      animation: showImg .5s;
+
+      &:hover img {
+        filter: blur(2px);
+        transition: all .5s ease-in-out;
+      }
+    }
+
+    &--img {
+      // transition: all 1s;
+      position: relative;
+      animation: showImg 1s;
+    }
+
+    &--btn {
+      position: absolute;
+      width: 64px;
+      height: 64px;
+      left: calc(50% - 32px);
+      top: calc(50% - 32px);
+      color: #FFFFFF;
+      font-size: 30px;
+      border: none;
+      border-radius: 50%;
+      background-color: rgba(63, 140, 255, 1);
+      padding: 3px 0 0 5px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__arrow {
+    width: 20px;
+    height: 45px;
+    border: none;
+    margin: 0 20px;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all .4s;
+
+    &--left {
+      background-image: url("../../assets/info/arrow_left.png");
+    }
+    &--right {
+      background-image: url("../../assets/info/arrow_right.png");
+    }
+
+    &:hover {
+      cursor: pointer;
+      filter: drop-shadow(0 5px 4px rgb(255, 178, 63));
+    }
+  }
+}
+
+@keyframes showImg {
+  0% {
+    filter: opacity(0.1);
+    left: 10px;
+  }
+  50% {
+    filter: opacity(0.5);
+    left: 5px;
+  }
+  100% {
+    filter: opacity(1);
+    left: 0;
+  }
+}
